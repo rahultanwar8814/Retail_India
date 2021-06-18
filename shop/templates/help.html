@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    <title>Help</title>
+    <link rel="stylesheet" href="static/3style.css" media="screen" type="text/css" />
+
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Homepage design with Bootstrap and Animate css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+ <style>
+    .getin{
+margin-top: 100px;
+margin-bottom:200px;
+
+
+    }
+</style>
+  
+</head>
+
+
+<body>
+
+    <header>
+        
+         
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 10px;">
+    <div class="container-fluid">
+      <a class="navbar-brand " style="font-size:large; margin-top: 20px;"  href="#">Retail India</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><span style="font-size: medium;">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about"><span style="font-size: medium;">About</span></a>
+          </li>
+          
+        </ul>
+        
+           <form action="/logout">
+                        {% csrf_token %}
+                       <input type="submit" value="Logout" class="btn btn-success mr-2"/>
+                     </form>
+
+                    
+           
+           
+      </div>
+    </div>
+  </nav>
+
+
+
+  
+
+ 
+ 
+    <!------Contact------------>
+     <section id="contact">
+    
+        <div class="container getin">
+            <h1>Get In Touch</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="helpmassage" method="post">
+                         {% csrf_token %}
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name..">
+                        </div>
+                        <div class="form-group">
+                        <input type="number" class="form-control" name="contect" placeholder="Phone no.">
+                        </div>
+                        <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email..">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control" rows="4" name="massage" placeholder="Message.."></textarea>
+                        </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6 contact-info">
+                    <div class="follow"><b><i class="fa fa-map-marker"></i>  </b>Hodal(palwal)</div>
+                    <div class="follow"><b><i class="fa fa-mobile"></i>  </b>(+91)8814860107</div>
+                    <div class="follow"><b><i class="fa fa-envelope"></i>  </b>hulksvironmanmark2@gmail.com</div>
+    
+    
+                    <div class="follow"><label><b>Get Social </b></label>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+                    <a href="https://myaccount.google.com/"><i class="fa fa-google-plus"></i></a>
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+ 
+
+
+
+
+
+
+ 
+        
+
+
+
+
+
+
+
+
+</header>
+    
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</body>
+</html>

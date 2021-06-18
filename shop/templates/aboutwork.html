@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/3style.css" media="screen" type="text/css" />
+    <title>About</title>
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Homepage design with Bootstrap and Animate css</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+
+
+
+  
+</head>
+<body>
+
+    <header>
+        
+         
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 10px;">
+    <div class="container-fluid">
+      <a class="navbar-brand " style="font-size:large; margin-top: 20px;"  href="#">Retail India</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><span style="font-size: medium;">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help"><span style="font-size: medium;">Help</span></a>
+          </li>
+          
+        </ul>
+        
+          <form action="/logout">
+                        {% csrf_token %}
+                       <input type="submit" value="Logout" class="btn btn-success mr-2"/>
+                     </form>
+
+                    
+           
+           
+      </div>
+    </div>
+  </nav>
+
+
+
+  
+
+<!------About Section------->
+	<section id="about">
+        <div class="container getin2">
+            <div class="row">
+                <div class="col-md-6">
+                <h2>About Us</h2>
+                    <div class="about-content">
+                    Affiliate marketing is an advertising model in which a company compensates
+                        third-party publishers to generate traffic or leads to the company’s products and services.
+                        The third-party publishers are affiliates, and the commission fee incentivizes them to find ways to promote the company.
+    
+    
+                    </div>
+                <button type="button" class="btn btn-primary">Read More>>
+    
+                </button>
+    
+                </div>
+                <div class="col-md-6 skills-bar">
+                <p>Delivery Rate</p>
+                <div class="progress">
+                <div class="progress-bar" style="width:85%;">99.9%</div>
+                </div>
+    
+                <p>Customer Growth</p>
+                <div class="progress">
+                <div class="progress-bar" style="width:75%;">9%</div>
+                </div>
+    
+                <p>Happy Employee</p>
+                <div class="progress">
+                <div class="progress-bar" style="width:90%;">9%</div>
+                </div>
+    
+                </div>
+            </div>
+    
+        </div>
+        </section>
+    
+    
+    <!------Services Section------->
+        <section id="services">
+    
+            <div class="container">
+                <h1>Our Services</h1>
+                <div class="row services" >
+                    <div class= "col-md-4 text-center">
+                        <div class="icon">
+                        <i class="fa fa-phone"></i>
+                        </div>
+                        <h3> 24/7 Support</h3>
+                        <p>on order related queries</p>
+                    </div>
+    
+                    <div class="col-md-4 text-center">
+                        <div class="icon">
+                        <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <h3> Return within 30 days</h3>
+                        <p>of receiving your order</p>
+                    </div>
+    
+                    <div class="col-md-4 text-center">
+                        <div class="icon">
+                        <i class="fa fa-truck"></i>
+                        </div>
+                        <h3>Get free delivery</h3>
+                        <p>on orders above 99Euro</p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+    
+    
+    
+    <!-----Team------->
+    <section id="team">
+    
+        <div class="container">
+            <h1>Our Team</h1>
+            <div class="row">
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                    <img src="static/cini.jpg" class="img-responsive">
+                    <ul>
+                        <a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="https://www.linkedin.com/home"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                    </div>
+                    <h2>Rahul Gupta</h2>
+                    <h3>Founder/CEO</h3>
+    
+                </div>
+    
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                    <img src="static/qq.jpg" class="img-responsive">
+                    <ul>
+                        <a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="https://www.linkedin.com/home"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                    </div>
+                    <h2>Rahul Tanwar</h2>
+                    <h3>Software Engineer</h3>
+    
+                </div>
+    
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                    <img src="static/sacin.jpg" class="img-responsive">
+                    <ul>
+                        <a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="https://www.linkedin.com/home"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                    </div>
+                    <h2>Sachin Song Star</h2>
+                    <h3>Sales Manager</h3>
+    
+                </div>
+    
+                <div class="col-md-3 profile-pic text-center">
+                    <div class="img-box">
+                    <img src="static/rahul.jpg" class="img-responsive">
+                    <ul>
+                        <a href="https://www.facebook.com/"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="https://twitter.com/login"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="https://www.linkedin.com/home"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                    </div>
+                    <h2>Rahul Tanwar</h2>
+                    <h3>Project Manager</h3>
+    
+                </div>
+            </div>
+        </div>
+    
+    </section>
+ 
+
+
+
+
+ 
+        
+
+
+
+
+
+
+
+
+</header>
+    
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</body>
+</html>
