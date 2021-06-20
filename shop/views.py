@@ -56,8 +56,8 @@ def index2(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
-        messages.success(request, " Your iCoder has been successfully created")
-        return HttpResponse("kaam ho gaya")
+        messages.success(request, " Your RetailIndia has been successfully created")
+        return HttpResponse("You have successfully registered ...")
 
     else:
         return HttpResponse("404 - Not found")

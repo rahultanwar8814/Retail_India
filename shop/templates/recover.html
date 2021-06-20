@@ -1,439 +1,292 @@
 <!DOCTYPE html>
 <!--Code by Divinector (www.divinectorweb.com)-->
 <html lang="en">
-
 <head>
-    <title>Homepage</title>
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Homepage design with Bootstrap and Animate css</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <style>
-        #u {
-            margin-top: 40px;
-        }
+<style>body {
+	font-family: 'Poppins', sans-serif;
+}
+header .carousel-inner .item {
+	height: 100vh;
+}
 
-        .myleg {
-            margin: 10px;
-        }
-    </style>
 
+.banner {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+.carousel-caption {
+	padding-bottom: 250px;
+	font-family: poppins;
+}
+.carousel-caption h2 {
+	font-size: 70px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.carousel-caption h2 span {
+	color: #EDBB00;
+}
+.carousel-caption a {
+	background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+}
+.carousel-control.right {
+	background-image: none;
+}
+.carousel-control.left {
+	background-image: none;
+}
+.carousel-indicators .active {
+	background-color: #EDBB00;
+	border-color: #EDBB00;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		padding-bottom: 350px;
+	}
+	.carousel-caption h2 {
+		font-size: 50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+
+	.carousel-caption {
+		padding-bottom: 120px;
+	}
+	.carousel-caption h2 {
+		font-size: 25px;
+	}
+	.carousel-caption h3 {
+		font-size: 18px;
+	}
+	.carousel-caption a {
+		padding: 10px 25px;
+	}
+
+}
+.a{
+    margin-left: 10px;
+}
+</style>
 </head>
-
-
 <body>
 
     <header>
 
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 10px;">
+    <div class="container-fluid">
+      <a class="navbar-brand " style="font-size:large;"  href="#">Retail India</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 10px;">
-            <div class="container-fluid">
-                <a class="navbar-brand " style="font-size:large; margin-top: 20px;" href="#">Retail India</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="help"><span style="font-size: medium;">Help</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about"><span style="font-size: medium;">About</span></a>
-                        </li>
+          <li class="nav-item">
+            <a class="nav-link a" href="/help"><span style="font-size: medium;">Help</span></a>
+          </li>
+          <li class="nav-item a">
+            <a class="nav-link " href="/about" tabindex="-1" aria-disabled="true"><span style="font-size: medium;">About</span></a>
+          </li>
+        </ul>
 
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0 myleg">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <form action="/logout">
-                        {% csrf_token %}
-                       <input type="submit" value="Logout" class="btn btn-success mr-2"/>
-                     </form>
+          <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#loginModal">
+          Login
+          </button>
 
 
+            <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#signupModal">
+            SignUp
+            </button>
 
+      </div>
+    </div>
+  </nav>
 
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="banner" style="background-image: url(static/d.jpg);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated bounceInRight" style="animation-delay: 1s">We Are <span>Future</span></h2>
+                        <h3 class="animated bounceInLeft" style="animation-delay: 2s">Best Price Product</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a data-target="#exampleModal" data-toggle="modal" class="MainNavText" id="MainNavHelp"
+                            href="#exampleModal">Contact</a></p>                    </div>
                 </div>
+                <div class="item">
+                    <div class="banner" style="background-image: url(static/aa.jpg);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated slideInDown" style="animation-delay: 1s">Co-Founder <span>Rahul/Rahul Gupta</span></h2>
+                        <h3 class="animated fadeInUp" style="animation-delay: 2s"></h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a data-target="#exampleModal" data-toggle="modal" class="MainNavText" id="MainNavHelp"
+                            href="#exampleModal">Contact</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image: url(static/ww.jpg);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">We Are <span>Engineers</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s"> Make You Smarter</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a data-target="#exampleModal" data-toggle="modal" class="MainNavText" id="MainNavHelp"
+                            href="#exampleModal">Contact</a></p>                    </div>
+                </div>
+
             </div>
-        </nav>
 
-
-
-
-
-
-
-
-
-
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
     </header>
 
 
-    <div class="album py-5" style="background-color: 	#a8b8d2;">
-        <div class="container " id="u">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-
-
-                <div class="col">
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/zz.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Zomato</h5>
-                            <p class="card-text">Zomato is an Indian multinational restaurant aggregator and food delivery company founded by Pankaj Chaddah and Deepinder Goyal in 2008. Zomato provides information, menus and user-reviews of restaurants as well as food delivery options from partner restaurants in select cities</p>
-                            <button class="btn"> <a class="btn" href="https://www.zomato.com/ncr/food-tamasha-restaurant-jaypee-greens-greater-noida">EARN CASHBACK FROM ZOMATO</a></li></button>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/sss.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Swiggy</h5>
-                            <p class="card-text">Swiggy is India's largest online food ordering and delivery platform, founded in 2014. Swiggy is based in Bangalore, India, and as of March 2019, was operating in 100 Indian cities. In early 2019, Swiggy expanded into general product deliveries under the name Swiggy Stores</p>
-                            			<button class="btn"> <a class="btn" href="https://www.swiggy.com/?utm_source=Google-Sok&utm_medium=CPC&utm_campaign=google_search_sok_food_na_narm_order_web_m_web_clubbedcities_neev_brand_newuser_v1_brand_bmm&gclid=Cj0KCQjwweyFBhDvARIsAA67M72mcYgaOzmNm7A80CADSK7WSQKZDORrFOFvK4-pBkPYg1tLjCUiYykaAjSyEALw_wcB">EARN CASHBACK FROM swiggy</a></li>
-                                        </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/aaa.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Amazon</h5>
-                            <p class="card-text">Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Facebook.</p>
-                          			<button class="btn"> <a class="btn" href="https://www.amazon.in/?ie=UTF8&ext_vrnc=hi&tag=googhydrabk-21&ascsubtag=_k_Cj0KCQjwweyFBhDvARIsAA67M731HM7DIROBg4sC-7V0N4OOQLTiem--CXX2OUYpGB0VFQU3ocF9ldkaAj8wEALw_wcB_k_&ext_vrnc=hi&gclid=Cj0KCQjwweyFBhDvARIsAA67M731HM7DIROBg4sC-7V0N4OOQLTiem--CXX2OUYpGB0VFQU3ocF9ldkaAj8wEALw_wcB">EARN CASHBACK FROM amazone</a></li>
-                                    </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/ff.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Flipkart</h5>
-                            <p class="card-text">Flipkart is an Indian e-commerce company, headquartered in Bangalore, Karnataka, India, and incorporated in Singapore as a private limited company</p>
-                           			<button class="btn"> <a class="btn" href="https://www.flipkart.com/">EARN CASHBACK</a></li>
-                                    </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/nn.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Nykaa</h5>
-                            <p class="card-text">Nykaa is an Indian lifestyle retailer of beauty, wellness, and fashion products that was founded by Falguni Nayar in 2012. In 2015, the company expanded from online-only to an omnichannel model and began selling products apart from beauty.</p>
-                           			<button class="btn"> <a class="btn" href="https://www.nykaa.com/?s_kwcid=AL!599!3!169815768939!e!!g!!nykaa%20makeup&ef_id=Cj0KCQjwweyFBhDvARIsAA67M72BXRHOaZl_D0H0TWmgr0gp1mWpMsvO2V9XGceWlGszYlbaNPUADWUaAp8PEALw_wcB:G:s&s_kwcid=AL!599!3!169815768939!e!!g!!nykaa%20makeup&utm_source=GooglePaid&utm_medium=Search&utm_campaign=Search_Nykaa&gclid=Cj0KCQjwweyFBhDvARIsAA67M72BXRHOaZl_D0H0TWmgr0gp1mWpMsvO2V9XGceWlGszYlbaNPUADWUaAp8PEALw_wcB">EARN CASHBACK FROM FLIPCART</a></li>
-                                    </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/bbb.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">BoAt</h5>
-                            <p class="card-text">BoAt is an Indian based consumer electronics brand established in 2015 that markets earphones, headphones stereos, travel chargers and premium rugged ...</p>
-                           			<button class="btn"> <a class="btn" href="https://www.boat-lifestyle.com/">EARN CASHBACK FROM BOAT</a></li>
-                                    </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/mm.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Mamaearth</h5>
-                            <p class="card-text">The Mamaearth company is an India brand and is based out of Gurugram, Haryana. It was founded by Varun and Ghazal Alagh in 2016 to provide toxin-free, natural baby care, skin care, and hair care products.</p>
-                           			<button class="btn"> <a class="btn" href="https://mamaearth.in/?utm_source=google&utm_medium=cpc&utm_term=83390950687&gclid=Cj0KCQjwweyFBhDvARIsAA67M71hCgSAoeb1SpJIK4Bx8KWe5Szq5FePwkFDkWYkMwiVVte018sXZhQaApsIEALw_wcB">EARN CASHBACK FROM mamaearth</a></li>
-                                    </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 30rem;">
-                        <img class="card-img-top" src="static/a.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-
-            </div>
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+         <div class="modal-body">
+          <form action="signup2" method="post">
+               {% csrf_token %}
+
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Choose a unique username">
+                </div>
+    <div class="form-group">
+      <label for="pass">Enter your password </label>
+      <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter your password ">
+    </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+   <!-- SignUp Modal -->
+ <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalTitle">SignUp Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action= "signup" method='post'>
+               {% csrf_token %}
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username" required>
+    </div>
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" required>
+    </div>
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+    </div>
+    <div class="form-group">
+      <label for="pass1">Choose a password</label>
+      <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password" required>
+    </div>
+    <div class="form-group">
+      <label for="pass2">Confirm Password</label>
+      <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again" required>
     </div>
 
 
 
-
-    <!-- Modal Choice from flip,amazon,self-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Buy From</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-primary">Amazon</button>
-                        <button type="button" class="btn btn-primary">Flipcart</button>
-                        <button type="button" class="btn btn-primary">ShopClues</button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#xampleModal">
-                            self
-                            </button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><span style="font-size:medium;">Contact number </span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
-                    </div>
+            <p><span style="font-size: large; color:green;">Rahul Ph.</span><span style="font-size: medium;">8814860107</span></p>
 
-                </div>
-            </div>
+            <p><span style="font-size: large; color:green;">Rahul Gupta Ph.</span><span style="font-size: medium;">8398859995</span></p>
+            </p>
 
         </div>
+
+      </div>
     </div>
-
-<!------------------------------------------------------->
-
-  <div class="modal fade" id="xampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-           <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Retail_India</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                     <form action="order2" method="post">
-                        {% csrf_token %}
-                           <div class="form-group">
-                            <label for="cname">Full Name</label>
-                            <input type="text" class="form-control" id="cname" name="username"
-                                placeholder="Enter your name" required>
-                        </div>
-                         <br>
-                          <div class="form-group">
-                            <label for="cnumber">Contect Number</label>
-                            <input type="text" class="form-control" id="cnumber" name="contectnumber"
-                                placeholder="Enter Your Phone number" required>
-                        </div>
-                          <br>
-
-                        <div class="form-group">
-                            <label for="cemail">Email address</label>
-                            <input type="email" class="form-control" id="cemail" name="email"
-                                placeholder="name@example.com" required>
-                        </div>
-                        <br>
-
-                        <div class="form-group">
-                            <label for="caddress">Delivery Address</label>
-                            <input type="text" class="form-control" id="caddress" name="cusername"
-                                placeholder="Fill Your Address" required>
-                        </div>
-                        <br>
-                         <div class="form-group">
-                            <label for="cquantity" >Quantity</label>
-
-                            <select id="cquantity" name="qu">
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                            </select>
-
-                        </div>
+  </div>
+    <!-- Delivery modal-->
 
 
-
-
-
-
-
-
-
-
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!------------------------------------------------------->
 
 
 
@@ -445,7 +298,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-
 </body>
-
 </html>

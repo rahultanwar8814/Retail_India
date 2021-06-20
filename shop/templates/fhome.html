@@ -87,15 +87,49 @@ header .carousel-inner .item {
 	}
 
 }
+
+
+
+
+.navbar {
+  min-height:5px;
+}
+
+.navbar-brand {
+  padding:0.15px;
+  height: 10px;
+  line-height: 10px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 10px;
+    padding-bottom:10px;
+    line-height: 10px;
+  }
+}
+
+.a{
+    margin-left: 10px;
+}
+
+
 </style>
 </head>
 <body>
 
     <header>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 10px;">
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand " style="font-size:large; margin-top: 20px;"  href="#">Retail India</a>
+      <a class="navbar-brand " style="font-size:large;"  href="#">Retail India</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -103,10 +137,10 @@ header .carousel-inner .item {
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
           <li class="nav-item">
-            <a class="nav-link" href="/help"><span style="font-size: medium;">Help</span></a>
+            <a class="nav-link a" href="/help"><span style="font-size: medium;">  Help</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/about" tabindex="-1" aria-disabled="true"><span style="font-size: medium;">About</span></a>
+            <a class="nav-link a" href="/about" tabindex="-1" aria-disabled="true"><span style="font-size: medium;">  About</span></a>
           </li>
         </ul>
 
