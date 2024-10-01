@@ -3,7 +3,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g=qxm05bk-e+1@^55fcmc^xuyyw2)6v9vy3$-r_@o0k8qa^x_s'
 DEBUG = True
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'django.contrib.admin',
